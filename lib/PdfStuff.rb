@@ -89,34 +89,6 @@ class PdfStuff
 
 end
 
-=begin
-
-Node node = xfa.getDatasetsNode();
-NodeList list = node.getChildNodes();
-for (int i = 0; i < list.getLength(); i++) {
-    if("data".equals(list.item(i).getLocalName())) {
-        node = list.item(i);
-        break;
-    }
-}
-list = node.getChildNodes();
-for (int i = 0; i < list.getLength(); i++) {
-    if("movies".equals(list.item(i).getLocalName())) {
-        node = list.item(i);
-        break;
-    }
-}
-Transformer tf = TransformerFactory.newInstance().newTransformer();
-tf.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-tf.setOutputProperty(OutputKeys.INDENT, "yes");
-tf.transform(new DOMSource(node), new StreamResult(os));
-reader.close();
-=end
-
-
-
-
-
 
 
 
