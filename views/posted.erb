@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<body>
+	<title>PDF Form data sent HTTP Post Parameters</title>
+
+<h1>Thanks!</h1>
+
+<p>Only the form field data is sent to the server.<br />
+	This works the same if the form was created in Acrobat or LiveCycle Designer
+</p>
+
+<table>
+
+<tr>
+	<th>Field Name</th>
+	<th>Value</th>
+
+</tr>
+
+<% params.each do |k,v| %>
+	<tr>
+		<td><%= k %></td>
+		<td><%= v %></td>
+
+	</tr>
+
+<% end %>
+
+
+</table>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<body>
+	<title>PDF Form sent via HTTP Post</title>
+
+<h1>Thanks!</h1>
+<p>The PDF form was created in Acrobat</p>
+<p>You submitted the following information:</p>
+
+<table>
+
+	<tr>
+		<th>Field Name</th>
+		<th>Value</th>
+
+	</tr>
+
+	<% @fData.each do |k,v| %>
+	<tr>
+		<td><%= k %></td>
+		<td><%= v %></td>
+
+	</tr>
+	<% end %>
+
+</table>
+
+</body>
+
+</html>

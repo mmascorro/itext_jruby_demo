@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form1>
+   <TextField1>Ego ille</TextField1>
+   <TextField2>Si manu vacuas</TextField2>
+   <NumericField1>4.2</NumericField1>
+   <people>
+      <lname>Apros tres et quidem</lname>
+      <fname>Mirum est</fname>
+   </people>
+   <people>
+      <lname>Licebit auctore</lname>
+      <fname>Proinde</fname>
+   </people>
+   <people>
+      <lname>Am undique</lname>
+      <fname>Ad retia sedebam</fname>
+   </people>
+   <people>
+      <lname>3543</lname>
+      <fname>Afdsaf</fname>
+   </people>
+   <people>
+      <lname>Licebit auctore</lname>
+      <fname>Proinde</fname>
+   </people>
+   <people>
+      <lname>Am undique</lname>
+      <fname>Ad retia sedebam</fname>
+   </people>
+   <people>
+      <lname>3543</lname>
+      <fname>Afdsaf</fname>
+   </people>
+</form1>
