@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<body>
+	<title>Received Forms</title>
+
+<h1>Received Forms</h1>
+
+<ul>
+<% @forms.each do |f| %>
+
+	<li><a href="received/<%= f %>"><%= f %></a></li>
+
+<% end %>
+</ul>
+
+</body>
+
+</html>

@@ -25,7 +25,7 @@ post '/pdf' do
 
 	pdfFile = request.body
 
-	fileName = "drops/form_#{Time.new.to_i}.pdf"
+	fileName = "public/received/form_#{Time.new.to_i}.pdf"
 
 	
 
@@ -64,9 +64,22 @@ get '/fillform/result' do
 
 	fName = "fill_#{Time.new.to_i}.pdf"
 
-	PdfStuff.fill('public/fill.pdf', 'public/fill.xml', "drops/#{fName}")
+	PdfStuff.fill('public/fill.pdf', 'public/fill.xml', "public/received/#{fName}")
 
-	send_file("drops/#{fName}")
+	send_file("public/received/#{fName}")
 
 end
 
+get '/inbox' do
+
+	@forms = []
+
+	Dir.foreach("public/received") do | f |
+	   
+		if f.match(/pdf/)
+			@forms.push(f)
+		end
+	end
+
+	erb :inbox
+end
