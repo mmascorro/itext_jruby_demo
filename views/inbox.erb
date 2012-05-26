@@ -1,18 +1,45 @@
 <!doctype html>
 <html>
-
+	<head>
+		<title>Received Forms</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+	</head>
 <body>
-	<title>Received Forms</title>
 
-<h1>Received Forms</h1>
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
 
-<ul>
-<% @forms.each do |f| %>
+		<div class="container">
+	    
+		<ul class="nav">
+		<li>
+			<a href="/">Home</a>
+		</li>
+		<li class="active">
+			<a href="/inbox">Inbox</a>
+		</li>
+		<li>
+			<a href="/fillform">Dynamic PDF</a>
+		</li>
+		</ul>
 
-	<li><a href="received/<%= f %>"><%= f %></a></li>
+		</div>
+	</div>
+</div>
 
-<% end %>
-</ul>
+<div class="container">
+	<h1>Received Forms</h1>
+
+	<ul>
+	<% @forms.each do |f| %>
+
+		<li><a href="received/<%= f %>"><%= f %></a></li>
+
+	<% end %>
+	</ul>
+
+</div>
 
 </body>
 

@@ -1,17 +1,22 @@
 <!doctype html>
 <html>
-
+	<head>
+		<title>PDF Form sent via HTTP Post</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
 <body>
-	<title>PDF Form sent via HTTP Post</title>
+	
+<div class="container">
+	<h1>Thanks!</h1>
+	<p>The PDF form was created in LiveCycle Designer</p>
+	<p>You submitted the following information:</p>
 
-<h1>Thanks!</h1>
-<p>The PDF form was created in LiveCycle Designer</p>
-<p>You submitted the following information:</p>
+	<pre>
+	<%= @fData %>
 
-<pre>
-<%= @fData %>
+	</pre>
 
-</pre>
+</div>
 
 </body>
 

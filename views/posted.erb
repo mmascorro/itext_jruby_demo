@@ -1,36 +1,40 @@
 <!doctype html>
 <html>
-
+	<head>
+		<title>PDF Form data sent HTTP Post Parameters</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
 <body>
-	<title>PDF Form data sent HTTP Post Parameters</title>
+	
+<div class="container">
+	<h1>Thanks!</h1>
+	<p>Only the form field data is sent to the server.<br />
+		This works the same if the form was created in Acrobat or LiveCycle Designer
+	</p>
 
-<h1>Thanks!</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Field Name</th>
+				<th>Value</th>
 
-<p>Only the form field data is sent to the server.<br />
-	This works the same if the form was created in Acrobat or LiveCycle Designer
-</p>
+			</tr>
+		</thead>
+		<tbody>
 
-<table>
+		<% params.each do |k,v| %>
+			<tr>
+				<td><%= k %></td>
+				<td><%= v %></td>
 
-<tr>
-	<th>Field Name</th>
-	<th>Value</th>
+			</tr>
 
-</tr>
+		<% end %>
 
-<% params.each do |k,v| %>
-	<tr>
-		<td><%= k %></td>
-		<td><%= v %></td>
+		</tbody>
+	</table>
 
-	</tr>
-
-<% end %>
-
-
-</table>
-
-
+</div>
 
 </body>
 

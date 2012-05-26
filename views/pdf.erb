@@ -1,30 +1,36 @@
 <!doctype html>
 <html>
-
+	<head>
+		<title>PDF Form sent via HTTP Post</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+	</head>
 <body>
-	<title>PDF Form sent via HTTP Post</title>
+	
+<div class="container">
+	<h1>Thanks!</h1>
+	<p>The PDF form was created in Acrobat</p>
+	<p>You submitted the following information:</p>
 
-<h1>Thanks!</h1>
-<p>The PDF form was created in Acrobat</p>
-<p>You submitted the following information:</p>
+	<table class="table table-striped">
 
-<table>
+		<thead>
+			<tr>
+				<th>Field Name</th>
+				<th>Value</th>
 
-	<tr>
-		<th>Field Name</th>
-		<th>Value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @fData.each do |k,v| %>
+			<tr>
+				<td><%= k %></td>
+				<td><%= v %></td>
 
-	</tr>
-
-	<% @fData.each do |k,v| %>
-	<tr>
-		<td><%= k %></td>
-		<td><%= v %></td>
-
-	</tr>
-	<% end %>
-
-</table>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
 
 </body>
 
